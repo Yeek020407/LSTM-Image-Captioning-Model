@@ -1,0 +1,35 @@
+{
+    "train_annotation_path" : "annotations/captions_train2017.json",
+    "val_annotation_path" : "annotations/captions_val2017.json",
+
+    "train_img_path" : "train2017/",
+    "val_img_path" : "val2017/",
+    
+    "word_vector_path":"google_news.txt",
+
+    "use_gpu": true,
+
+    "end_token":"</s>",
+    "start_token":"<s>",
+    "unk_token":"<UNK>",
+    "pad_token":"<PAD>",
+
+    "seed": 42,
+
+    "train_config": {
+        "no_of_epochs": 10,
+        "learning_rate": 4e-4,
+        
+        "grad_clip":5.0,
+        "lamda":1.0
+    },
+
+    "batch_size":283,
+
+    "model_config": {
+        "decoder_dim": 300,
+        "attention_dim":300,
+        "hidden_dim":300,
+        "dropout":0.5
+    }
+}
